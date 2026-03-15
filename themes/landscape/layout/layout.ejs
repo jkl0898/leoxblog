@@ -16,5 +16,7 @@
     <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
     <%- partial('_partial/after-footer') %>
   </div>
+  <!-- 播放器容器 - 在 container 外部，确保 pjax 切换时不被替换 -->
+  <div id="aplayer-fixed"></div>
 </body>
 </html>
