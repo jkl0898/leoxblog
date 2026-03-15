@@ -1,0 +1,70 @@
+/* APlayer 样式文件 */
+
+/* Pjax 加载状态 */
+.pjax-loading {
+  cursor: wait;
+}
+
+.pjax-loading #wrap {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* 播放器容器 */
+#aplayer-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+#aplayer-fixed .aplayer-body {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#aplayer-fixed .aplayer-body:hover {
+  background: #fff;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 播放列表 */
+#aplayer-fixed .aplayer-list {
+  max-height: 400px !important;
+}
+
+/* 歌词区域 */
+#aplayer-fixed .aplayer-lrc {
+  z-index: 1000;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  #aplayer-fixed .aplayer-body {
+    font-size: 12px;
+  }
+  
+  #aplayer-fixed .aplayer-title {
+    font-size: 14px;
+  }
+  
+  #aplayer-fixed .aplayer-author {
+    font-size: 12px;
+  }
+}
+
+/* 迷你模式 */
+#aplayer-fixed.aplayer-narrow .aplayer-body {
+  width: 66px !important;
+}
+
+/* 隐藏播放列表时的样式 */
+#aplayer-fixed .aplayer-list-hide {
+  display: none !important;
+}
